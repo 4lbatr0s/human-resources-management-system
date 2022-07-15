@@ -1,6 +1,7 @@
 package coding.hrms.api.controllers;
 
 import coding.hrms.business.abstracts.JobService;
+import coding.hrms.core.utils.results.DataResult;
 import coding.hrms.entities.concretes.Job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,8 +24,8 @@ public class JobsController {
 
 
     @GetMapping("/getall")
-    public List<Job> GetAll () {
-        return this._jobService.GetAll();
+    public DataResult<List<Job>> GetAll () {
+        return this._jobService.getAll ();
     }
 
 }

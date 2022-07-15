@@ -4,6 +4,7 @@ package coding.hrms.entities.concretes;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "job_titles")
@@ -14,6 +15,8 @@ public class Job {
     @Column(name = "id")
     private int id;
 
+
+    @NotBlank
     @Column(name = "title")
     private String title;
 }
